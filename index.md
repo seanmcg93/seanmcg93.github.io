@@ -1,15 +1,6 @@
 ---
 layout: default
 ---
-
-Text can be **bold**, _italic_, ~~strikethrough~~ or `keyword`.
-
-[Projects](./projects/index.md).
-
-There should be whitespace between paragraphs.
-
-There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
-
 # My Story
 
 Welcome to my corner of the web! I’m Sean McGovern, and I embarked on my journey into the world of Information Technology in January 2023, spurred by a New Year’s resolution to pursue my passion for technology and provide a better future for my wonderful family.
@@ -24,7 +15,11 @@ Presently, I remain dedicated to my role on the help desk at the small farm comp
 
 Thank you for joining me on this adventure, and I invite you to explore further as I document my progress and share insights along the way.
 
-## Social
+### Contact
+Sean McGovern
+
+La Grange, North Carolina 
+
 [Linkedin](https://www.linkedin.com/in/sean-mcgovern-310457272/) 
 
 
