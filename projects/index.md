@@ -2,9 +2,9 @@
 layout: default
 ---
 # Projects
-* [NMAP](./nmap/index.yml)
+* [NMAP](./nmap/index.md)
 
-* [Snort](./snort/index.yml)
+* [Snort](./snort/index.md)
 
 
 
