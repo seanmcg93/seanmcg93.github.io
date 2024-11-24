@@ -2,122 +2,64 @@
 layout: default
 ---
 
-Text can be **bold**, _italic_, ~~strikethrough~~ or `keyword`.
+# Exploring NMAP
 
-[Link to another page](./another-page.html).
+In a nutshell Nmap is a tool that allows for us to see devices and open ports on an network. It also allows us to see running services and detect vulnerabilities. Because Nmap is a such a powerful tool for IT Professionals, it is also a powerful tool for penetration testers and even hackers.
 
-There should be whitespace between paragraphs.
+## Testing NMAP
 
-There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
+Now for testing I will be using 2 virtual machines, a Kali-Linux machine and another Linux machine called Metasploitable 2. This VM is designed to be vulnerable so it will be perfect to test the power of Nmap. Now lets first check our IP sunbet of the Kali VM.
 
-# Header 1
+$ ifconfig
+INSERT PICTURE
 
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
+Alright we are on the 192.168.56.0/24 subnet.
 
-## Header 2
+Next lets scan for running host.
 
-> This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor.
+nmap -sP 192.168.56.*
+*Please note the * is a wildcard character, so we are scanning the whole /24 subnet. 
+This would of worked as well:
+nmap -sP 192.168.56.0/24
+INSERT PICTURE
 
-### Header 3
+Alright we see we have multiple running host. In this example I know the 192.168.56.104 in the metasploitable VM, lets dive deeper into that IP.
 
-```js
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
-}
-```
+I want to see what Operating system is running first, so lets check that out.
 
-```ruby
-# Ruby code with syntax highlighting
-GitHubPages::Dependencies.gems.each do |gem, version|
-  s.add_dependency(gem, "= #{version}")
-end
-```
+nmap -O 192.168.56.104
+INSERT PICTURE
+INSERT PICTURE
 
-#### Header 4
+We can see this machine is running a version of Linux and from the Trace route shown is only 1 hop away.
 
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
+I wonder if there are any open ports on this machine… Lets check!
 
-##### Header 5
+nmap -sS 192.168.56.104
+nmap -sT 192.168.56.104
 
-1.  This is an ordered list following a header.
-2.  This is an ordered list following a header.
-3.  This is an ordered list following a header.
+INSERT PICTURE(*3)
 
-###### Header 6
+Wow, in the worlds of Phil Swift, “That’s a lot of open ports!” I do want to talk to you about the difference between nmap -sS and nmap sT. Both of the scans are using TCP to communicate with the host on that particular port to see if it’s open or not. The difference is the -sS (Stealth Scan) is not completing the 3 TCP 3 way handshake and -sT is completed the 3 way handshake. The full 3 way handshake of the client sending a “SYN”, then the host sending a “SYN, ACK”, then client again “ACK”. Let me show you with WireShark.
 
-| head1        | head two          | three |
-|:-------------|:------------------|:------|
-| ok           | good swedish fish | nice  |
-| out of stock | good and plenty   | nice  |
-| ok           | good `oreos`      | hmm   |
-| ok           | good `zoute` drop | yumm  |
+INSERT PICTURE
 
-### There's a horizontal rule below this.
+This image shows the full 3 way handshake between client and server.
 
-* * *
+INSERT PICTURE
 
-### Here is an unordered list:
+This image is showing a incomplete TCP 3 way handshake.
+Lastly lets check the house for vulnerabilities. There are scripts we can run to check for CVE’s against our target system.
 
-*   Item foo
-*   Item bar
-*   Item baz
-*   Item zip
+nmap --script vuln -oN vuln_output.txt
+(-oN is simply writting the output to a txt file for later use.)
 
-### And an ordered list:
+INSERT PICTURE (*2)
 
-1.  Item one
-1.  Item two
-1.  Item three
-1.  Item four
+I’m only showing 1 of the vulnerabilities that came up because there were so many of them! You name it this machines has vulnerability waiting to be exploited. Downgrade attacks, SQL injections, and Privilege escalation just to name a few.
 
-### And a nested list:
-
-- level 1 item
-  - level 2 item
-  - level 2 item
-    - level 3 item
-    - level 3 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-
-### Small image
-
-![Octocat](https://github.githubassets.com/images/icons/emoji/octocat.png)
-
-### Large image
-
-![Branching](https://guides.github.com/activities/hello-world/branching.png)
+As we can see, Nmap is a powerful tool that allows network administrators and security professionals to map their networks, identify open ports, and detect potential vulnerabilities before they become critical issues. Its versatility and efficiency make it an invaluable asset for proactive network management and security assessments. Whether you’re locating forgotten open ports or running vulnerability scans, Nmap provides the insight needed to maintain a secure and well-organized network.
 
 
-### Definition lists can be used with HTML syntax.
 
-<dl>
-<dt>Name</dt>
-<dd>Godzilla</dd>
-<dt>Born</dt>
-<dd>1952</dd>
-<dt>Birthplace</dt>
-<dd>Japan</dd>
-<dt>Color</dt>
-<dd>Green</dd>
-</dl>
 
-```
-Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
-```
-
-```
-The final element.
-```
