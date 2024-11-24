@@ -4,6 +4,8 @@ layout: default
 
 # Snort
 
+![Snort](project_images/snort_resized.png)
+
 I have been using [TryHackMe](https://www.tryhackme.com) to further my knowledge in cybersecurity. Currently, I am working through the SOC Level 1 Path, which has introduced me to Snort.
 
 According to [Snort.org](https://www.snort.org), _Snort is the foremost Open Source Intrusion Prevention System (IPS) in the world. Snort IPS uses a series of rules that help define malicious network activity and uses those rules to find packets that match against them and generates alerts for users.
