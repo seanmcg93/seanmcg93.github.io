@@ -10,9 +10,9 @@ In a nutshell Nmap is a tool that allows for us to see devices and open ports on
 
 Now for testing I will be using 2 virtual machines, a Kali-Linux machine and another Linux machine called Metasploitable 2. This VM is designed to be vulnerable so it will be perfect to test the power of Nmap. Now lets first check our IP sunbet of the Kali VM.
 
-'''
+```
 $ ifconfig
-'''
+```
 
 ![ifconfig](project_images/ifconif_kali.png)
 
