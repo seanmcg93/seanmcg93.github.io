@@ -15,31 +15,49 @@ The next step is my journal leads me to take on 2 separate scenarios to demonstr
 
 ## Scenario 1
 
-For this first task we think we may be under a brute force attack. We need to use snort to investigate and if necessary take action to prevent this. First I’m going to run snort to see if I can quickly identify anything suspicious. To do this I will run the command: _sudo snort -X_ (The -X parameter will let us display the full packet details in HEX.) Now lets take a look at these packets and see if anything looks unusual. I think I may have found something..
+For this first task we think we may be under a brute force attack. We need to use snort to investigate and if necessary take action to prevent this. First I’m going to run snort to see if I can quickly identify anything suspicious. To do this I will run the command:
+
+```
+sudo snort -X (The -X parameter will let us display the full packet details in HEX.) 
+```
+
+Now lets take a look at these packets and see if anything looks unusual. I think I may have found something..
 
 ![First Scan](project_images/1-investigating.png)
 
 This one was pretty easy to find because there is a lot of HEX displayed. Looks like someone is trying to use SSH and brute force into the system. Let’s create a rule to prevent this. We need to edit the local.rules file. That can be found in /etc/snort/rules/local.rules
 
-We will run the command: _sudo gedit /etc/snort/rules/local.rules (gedit is a text tool similar to nano)_
+We will run the command: 
+
+```
+sudo gedit /etc/snort/rules/local.rules (gedit is a text tool similar to nano)
+```
 
 Here we can create a rule to block the activity. The rules I’m creating is going to reject any packets with a 10.10.245.36 address going to any IP using port 22.
 
 ![Rule Creation](project_images/1-Rule_creation.png)
 
-Now we can test that our rules are being recognized by snort and there is no syntax errors by running: sudo snort -T -c /etc/snort/snort.conf (-T is a self test and -c is identifying the configuration file, the path of snort.conf)
+Now we can test that our rules are being recognized by snort and there is no syntax errors by running: 
+
+```
+sudo snort -T -c /etc/snort/snort.conf (-T is a self test and -c is identifying the configuration file, the path of snort.conf)
+```
 
 If it validates we should be good to run snort again with this new rule to see if it stops the suspicious traffic and logs it for us to see!
 
 We can now run snort with the newly created rule by running:
 
-_sudo snort -c /etc/snort/snort.conf -A full_ (-A tells snort which alert mode to use, I use -A full. Which is full alert mode it provides all possible information regarding the alert.)
+```
+sudo snort -c /etc/snort/snort.conf -A full (-A tells snort which alert mode to use, I use -A full. Which is full alert mode it provides all possible information regarding the alert.)
+```
 
 ![Results](project_images/1-Final_Run.png)
 
 Under action stats “Alerts” is how many times a rule/s were triggered. It looks like we stopped it. I also want to check the logs as well.
 
-_Sudo gedit /var/log/snort/alert_
+```
+Sudo gedit /var/log/snort/alert
+```
 
 ![Log](project_images/1-alert_log.png)
 
@@ -51,29 +69,40 @@ For this next scenario we need to stop a reverse shell attempt. Our plan of atta
 
 First we investigate the current network activity.
 
-_Sudo snort -X_
+```
+Sudo snort -X
+```
 
 ![First Scan](project_images/2-investigating.png)
 
 Well we don’t have a lot of HEX like in this last one to give it away, but something I do see as odd is Port 4444. Port 4444 is used by Metasploit to create back doors into a system. Now with us knowing this lets go ahead and create a rule for this :
 
-_sudo gedit /etc/snort/rules/local.rules_
+```
+sudo gedit /etc/snort/rules/local.rules
+```
 
 I want to create 2 rules here, one for the suspicious IP and one for the port it self.
 
 The rules will look like this:
 
-_reject tcp any any <> 10.10.144.156 any (msg:”SUSPICIOUS IP POSSIBLE BACK DOOR”; sid:1000001; rev:1;)_
-
-_reject tcp any any <> any 4444 any (msg:”SUSPICIOUS PORT METASPLOIT”; sid:1000002; rev:2;)_
+```
+reject tcp any any <> 10.10.144.156 any (msg:”SUSPICIOUS IP POSSIBLE BACK DOOR”; sid:1000001; rev:1;)
+```
+```
+reject tcp any any <> any 4444 any (msg:”SUSPICIOUS PORT METASPLOIT”; sid:1000002; rev:2;)
+```
 
 Next we validate the newly created rules:
 
-_sudo snort -T -c /etc/snort/snort.conf_
+```
+sudo snort -T -c /etc/snort/snort.conf
+```
 
 Alright great! The rule has been validated lets put it to the test!
 
-_Sudo Snort -c /etc/snort/snort.conf -A full_
+```
+Sudo Snort -c /etc/snort/snort.conf -A full
+```
 
 ![Results](project_images/2-Final_Run.png)
 
@@ -81,7 +110,9 @@ It looks like we prevented the back door!
 
 Let’s check out the logs as well:
 
-_gedit /var/log/snort/alert_
+```
+gedit /var/log/snort/alert
+```
 
 ![Alert](project_images/2-alert_log.png)
 
