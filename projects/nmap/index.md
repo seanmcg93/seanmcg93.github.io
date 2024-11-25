@@ -20,10 +20,16 @@ Alright we are on the 192.168.56.0/24 subnet.
 
 Next lets scan for running host.
 
+```
 nmap -sP 192.168.56.*
+```
+
 *Please note the * is a wildcard character, so we are scanning the whole /24 subnet. 
 This would of worked as well:
+
+```
 nmap -sP 192.168.56.0/24
+```
 
 ![Check Host](project_images/check_up_host.png)
 
@@ -31,7 +37,9 @@ Alright we see we have multiple running host. In this example I know the 192.168
 
 I want to see what Operating system is running first, so lets check that out.
 
+```
 nmap -O 192.168.56.104
+```
 
 ![OS Check](project_images/os_check.png)
 
@@ -41,8 +49,11 @@ We can see this machine is running a version of Linux and from the Trace route s
 
 I wonder if there are any open ports on this machine… Lets check!
 
+```
 nmap -sS 192.168.56.104
+
 nmap -sT 192.168.56.104
+``
 
 ![Stealth](project_images/stealth_scan.png)
 
@@ -61,7 +72,9 @@ This image shows the full 3 way handshake between client and server.
 This image is showing a incomplete TCP 3 way handshake.
 Lastly lets check the house for vulnerabilities. There are scripts we can run to check for CVE’s against our target system.
 
+```
 nmap --script vuln -oN vuln_output.txt
+```
 (-oN is simply writting the output to a txt file for later use.)
 
 ![Vulnerability Scan](project_images/nmap_vuln_scan.png)
