@@ -53,7 +53,7 @@ I wonder if there are any open ports on this machine… Lets check!
 nmap -sS 192.168.56.104
 
 nmap -sT 192.168.56.104
-``
+```
 
 ![Stealth](project_images/stealth_scan.png)
 
