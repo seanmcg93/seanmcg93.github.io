@@ -126,7 +126,7 @@ As I continue my cybersecurity journey, I’m excited to explore more advanced f
 
 Happy learning, and remember: Keep feeding the pig!
 
-
+### [Projects](./projects/index.md)
 
 ### Contact
 Sean McGovern
