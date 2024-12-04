@@ -125,3 +125,12 @@ If you’re interested in learning more about Snort, I encourage you to try it o
 As I continue my cybersecurity journey, I’m excited to explore more advanced features of Snort and other tools that help protect systems and networks. Stay tuned for more as I share my progress, and feel free to reach out or share your own experiences with Snort—I’d love to hear from you!
 
 Happy learning, and remember: Keep feeding the pig!
+
+
+
+### Contact
+Sean McGovern
+
+La Grange, North Carolina 
+
+[Linkedin](https://www.linkedin.com/in/sean-mcgovern-310457272/) 

@@ -7,6 +7,14 @@ layout: default
 * [Snort](./snort/index.md)
 
 
+### Contact
+Sean McGovern
+
+La Grange, North Carolina 
+
+[Linkedin](https://www.linkedin.com/in/sean-mcgovern-310457272/) 
+
+
 
 
 
