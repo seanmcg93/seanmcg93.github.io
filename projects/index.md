@@ -6,7 +6,7 @@ layout: default
 
 * [Snort](./snort/index.md)
 
-* [Zui/Brim](./zui/index.md)
+* [Zui/Brim](./Zui/index.md)
 
 
 
