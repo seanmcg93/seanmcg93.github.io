@@ -103,6 +103,10 @@ I encourage you to explore Zui and experiment with your own PCAP files. The more
 [Zeek log Cheat Sheet](https://corelight.com/hubfs/resources/zeek-cheatsheets/corelight-cheatsheet-poster.pdf)
 
 
+
+### [Projects](../index.md)
+
+
 ### Contact
 Sean McGovern
 
