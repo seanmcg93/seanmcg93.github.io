@@ -1,6 +1,8 @@
 ---
 layout: default
 ---
+### [Home](../../index.md) | [Projects](../index.md)
+
 
 # Zui 
 
@@ -104,7 +106,7 @@ I encourage you to explore Zui and experiment with your own PCAP files. The more
 
 
 
-### [Projects](../index.md)
+
 
 
 ### Contact
