@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-### Home | Projects
+### Home | [Projects](./projects/index.md)
 
 
 
