@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-#### [Home](./index.md) | [Projects](./projects/index.md)
+### [Home](./index.md) | [Projects](./projects/index.md)
 
 
 
