@@ -1,6 +1,8 @@
 ---
 layout: default
 ---
+### [Home](../../index.md) | [Projects](../index.md)
+
 
 # Snort
 
