@@ -1,9 +1,8 @@
 ---
 layout: default
 ---
-### Home
-|
-### Projects
+### Home | Projects
+
 
 
 # My Story
