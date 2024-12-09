@@ -1,6 +1,11 @@
 ---
 layout: default
 ---
+### Home
+|
+### Projects
+
+
 # My Story
 
 Welcome to my corner of the web! I’m Sean McGovern, and I embarked on my journey into the world of Information Technology in January 2023, spurred by a New Year’s resolution to pursue my passion for technology and provide a better future for my wonderful family.
