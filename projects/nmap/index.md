@@ -88,7 +88,7 @@ I’m only showing 1 of the vulnerabilities that came up because there were so m
 As we can see, Nmap is a powerful tool that allows network administrators and security professionals to map their networks, identify open ports, and detect potential vulnerabilities before they become critical issues. Its versatility and efficiency make it an invaluable asset for proactive network management and security assessments. Whether you’re locating forgotten open ports or running vulnerability scans, Nmap provides the insight needed to maintain a secure and well-organized network.
 
 
-### [Projects](../index.md)
+
 
 
 ### Contact
