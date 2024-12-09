@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-### Home | [Projects](./projects/index.md)
+#### [Home](./index.md) | [Projects](./projects/index.md)
 
 
 
@@ -19,7 +19,6 @@ Presently, I remain dedicated to my role on the help desk at the small farm comp
 
 Thank you for joining me on this adventure, and I invite you to explore further as I document my progress and share insights along the way.
 
-### [Projects](./projects/index.md)
 
 ### Contact
 Sean McGovern
