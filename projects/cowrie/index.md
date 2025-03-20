@@ -15,7 +15,7 @@ Cowrie is a honeypot designed to log brute-force attacks and attacker shell inte
    - Cowrie (Honeypot)
    - MySQL (Log Storage)
    
- ## Running Cowrie
+## Running Cowrie
  
  I ran Cowrie for just half a day, and even in that short time, I observed some very interesting and suspicious behavior. Almost immediately, I started seeing clear signs of brute-force attacks.
  
