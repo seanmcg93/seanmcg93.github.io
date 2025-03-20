@@ -63,6 +63,10 @@ history -c  # Clears the shell history to erase evidence of the commands.
 **Note:** I have defanged the IP of the malware-hosting server for safety.
 It appears that the attacker runs both wget and curl, likely to ensure the download succeeds in case one of the utilities is unavailable on the system.
 
+![Malware-Hosting Server](project_images/malware_host.png)
+
+We can see the full report on the Malware-Hosting Server [here](https://www.virustotal.com/gui/ip-address/43.249.172.195).
+
 ## The Malware
 
 We can see that the attacker downloaded something—but what?
