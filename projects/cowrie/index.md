@@ -27,7 +27,7 @@ To see the full extent of this brute-force attack, you can review the .csv file 
 
 We can see that the brute-force attack started at _12:40:02_ from IP **218.92.0.186**. The attacker successfully gained access to the system at _15:08:35_, meaning it took them a little over two hours to guess the correct password—**root**.
 
-![Brute Force Success](project_images/bf_success)
+![Brute Force Success](project_images/bf_success.png)
 
 It appears that the attacker used **218.92.0.186** to carry out the brute-force attack and, once successful, handed access over to **218.92.0.131**, likely to handle malware delivery.
 
@@ -74,7 +74,7 @@ Luckily for us, Cowrie has excellent logging and provides a SHA-256 hash of the 
 
 Now that we have the hash, we can submit it to VirusTotal to analyze it and determine what kind of malware we’re dealing with.
 
-![Virus Total Hash](project_files/virustotal_hash.png)
+![Virus Total Hash](project_images/virustotal_hash.png)
 
 See the full report from _VirusTotal_ [here](https://www.virustotal.com/gui/file/ea40ecec0b30982fbb1662e67f97f0e9d6f43d2d587f2f588525fae683abea73)
 
@@ -112,9 +112,11 @@ From this report, we can see that this file is identified as a Trojan linked to 
 
 This experiment with Cowrie provided a firsthand look at real-world SSH brute-force attacks and malware delivery techniques. By capturing and analyzing attacker activity, we uncovered how XorDDoS spreads and operates. This highlights the importance of strong authentication, monitoring logs, and proactive security measures to defend against such threats.
 
-### Docs
+### Docs & Other Files
 *	[Cowrie Docs](https://docs.cowrie.org/en/latest/)
 *	[Cowrie GitHub](https://github.com/cowrie/cowrie)
+*	[Project Images](project_images/)
+*	[Project Files](project_files/)
 
 
 
