@@ -11,7 +11,7 @@ layout: default
 
 * [Zui/Brim](./Zui/index.md)
 
-* [Cowrie (Honeypot)](./cowrie.index.md)
+* [Cowrie (Honeypot)](./cowrie/index.md)
 
 
 
