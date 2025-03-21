@@ -23,7 +23,7 @@ Cowrie is a honeypot designed to log brute-force attacks and attacker shell inte
  
 From this image, we can see an attack originating from **218.92.0.186**. Other random IPs also appear from time to time, which we will discuss later.
 
-To see the full extent of this brute-force attack, you can download the .csv file [here](project_files/auth_ip.csv).
+To see the full extent of this brute-force attack, you can view the .csv file [here](https://github.com/seanmcg93/seanmcg93.github.io/blob/main/projects/cowrie/project_files/auth_ip.csv).
 
 We can see that the brute-force attack started at _12:40:02_ from IP **218.92.0.186**. The attacker successfully gained access to the system at _15:08:35_, meaning it took them a little over two hours to guess the correct password—**root**.
 
@@ -59,6 +59,7 @@ rm -rf 112s;  # Deletes "112s" after execution.
 history -c  # Clears the shell history to erase evidence of the commands.
 
 ```
+You can view the .csv for the attackers inputs [here](https://github.com/seanmcg93/seanmcg93.github.io/blob/main/projects/cowrie/project_files/inputs.csv).
 
 **Note:** I have defanged the IP of the malware-hosting server for safety.
 It appears that the attacker runs both wget and curl, likely to ensure the download succeeds in case one of the utilities is unavailable on the system.
@@ -129,6 +130,8 @@ This experiment with Cowrie provided a firsthand look at real-world SSH brute-fo
 Sean McGovern
 
 La Grange, North Carolina 
+
+Interested in my experience? Check out my [resume](https://seanmcg93.github.io/resume/Sean_McGovern_Resume.pdf)!
 
 [Linkedin](https://www.linkedin.com/in/sean-mcgovern-310457272/) 
 
