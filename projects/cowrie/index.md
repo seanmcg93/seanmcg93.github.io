@@ -23,7 +23,7 @@ Cowrie is a honeypot designed to log brute-force attacks and attacker shell inte
  
 From this image, we can see an attack originating from **218.92.0.186**. Other random IPs also appear from time to time, which we will discuss later.
 
-To see the full extent of this brute-force attack, you can review the .csv file [here](project_files/auth_ip.csv).
+To see the full extent of this brute-force attack, you can download the .csv file [here](project_files/auth_ip.csv).
 
 We can see that the brute-force attack started at _12:40:02_ from IP **218.92.0.186**. The attacker successfully gained access to the system at _15:08:35_, meaning it took them a little over two hours to guess the correct password—**root**.
 
@@ -119,8 +119,8 @@ This experiment with Cowrie provided a firsthand look at real-world SSH brute-fo
 ### Docs & Other Files
 *	[Cowrie Docs](https://docs.cowrie.org/en/latest/)
 *	[Cowrie GitHub](https://github.com/cowrie/cowrie)
-*	[Project Images](project_images/)
-*	[Project Files](project_files/)
+
+
 
 
 
